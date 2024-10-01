@@ -1,8 +1,91 @@
 .keypad {
-}
-
-.keypad button {
-}
-
-.keypad button:hover {
-}
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 10px;
+    padding: 20px;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra del contenedor */
+  }
+  
+  button {
+    background-color: #333333; /* Color oscuro para los botones numéricos */
+    color: white;
+    border: none;
+    font-size: 1.8rem; /* Tamaño de fuente grande */
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.3); /* Sombra en los botones */
+  }
+  
+  button:hover {
+    background-color: #444444; /* Cambia a un gris más claro en hover */
+  }
+  
+  button:active {
+    background-color: #222222; /* Color más oscuro al hacer clic */
+    transform: scale(0.98); /* Ligeramente más pequeño al hacer clic */
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2); /* Sombra más pequeña al hacer clic */
+  }
+  
+  /* Botones de operaciones (+, -, *, /, =) */
+  button:nth-child(4n),
+  button:nth-child(2),
+  button:nth-child(3),
+  button:nth-child(12) {
+    background-color: #0078d7; /* Color azul de Windows para los operadores */
+    color: white;
+  }
+  
+  button:nth-child(4n):hover,
+  button:nth-child(2):hover,
+  button:nth-child(3):hover,
+  button:nth-child(12):hover {
+    background-color: #005a9e; /* Color azul más oscuro en hover */
+  }
+  
+  button:nth-child(16) {
+    grid-column: span 2; /* El botón "0" ocupa dos columnas */
+  }
+  
+  /* Botón "=" ocupa dos filas */
+  button:nth-child(12) {
+    grid-row: span 2; /* Hace que el botón "=" ocupe dos filas verticales */
+    background-color: #0078d7;
+    color: white;
+  }
+  
+  button:nth-child(12):hover {
+    background-color: #005a9e;
+  }
+  
+  /* Ajuste de tipografía y tamaño para pantallas pequeñas */
+  @media (max-width: 768px) {
+    button {
+      font-size: 1.4rem;
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    button {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    .keypad {
+      gap: 5px;
+      padding: 10px;
+    }
+  }
+  
+  /* Pantalla de la calculadora */
+  .display {
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 2.5rem;
+    padding: 20px;
+    text-align: right;
+    box-shadow: inset 0 -4px rgba(0, 0, 0, 0.2);
+  }
+  

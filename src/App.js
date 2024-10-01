@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Display from './Componentes/Display.js';
 import Keypad from './Componentes/Keypad.js';
-import '../src/styles/App.css';
+import '../src/App.css';
 
 function App() {
   // Estado para almacenar la entrada actual del usuario

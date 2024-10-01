@@ -1,11 +1,11 @@
 /* App.css */
 
 .calculator {
-  width: 300px;
-  margin: 50px auto; /* Centra la calculadora */
+  width: 500px;
+  margin: 50px auto;
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #075157;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

@@ -5,11 +5,11 @@ import '../styles/Keypad.css'
 function Keypad({ handleClick }) {
   // Lista de botones de la calculadora
   const buttons = [
-    'C', '/', '*', '-', // Primera fila
+    'C', '/', // Primera fila
     '7', '8', '9', '+', // Segunda fila
-    '4', '5', '6', '=', // Tercera fila
-    '1', '2', '3', '.', // Cuarta fila
-    '0',               // Quinta fila
+    '4', '5', '6', '*', // Tercera fila
+    '1', '2', '3', '-',// Cuarta fila
+    '0', '.', '='        // Quinta fila
   ];
 
   return (
