@@ -1,11 +1,54 @@
-/* App.css */
-
+/* Estilo general para la calculadora */
 .calculator {
-  width: 500px;
-  margin: 50px auto;
+  width: 900px;
+  margin: 20px auto; /* Para centrar horizontalmente */
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
   background-color: #075157;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Centrar la calculadora en toda la pantalla */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;     /* Centrar verticalmente */
+  height: 100vh;           /* La altura del contenedor será el 100% de la ventana */
+  background-color: #003D42; /* Color de fondo */
+}
+
+/* Consulta para pantallas medianas (máximo 768px) */
+@media (max-width: 768px) {
+  .calculator {
+    width: 100%; /* Cambia el ancho para pantallas más pequeñas */
+  }
+
+  button {
+    font-size: 1.4rem;
+    height: 70px;
+  }
+}
+
+/* Consulta para pantallas pequeñas (máximo 480px) */
+@media (max-width: 480px) {
+  .calculator {
+    width: 100%; /* Ajusta el tamaño de la calculadora para pantallas pequeñas */
+  }
+
+  button {
+    font-size: 1rem;
+    height: 50px;
+  }
+
+  .keypad {
+    gap: 5px;
+    padding: 10px;
+  }
 }
