@@ -1,22 +1,30 @@
-// Keypad.js
 import React from 'react';
-import '../styles/Keypad.css'
+import '../styles/Keypad.css';
 
 function Keypad({ handleClick }) {
-  // Lista de botones de la calculadora
+  // Lista de botones de la calculadora organizada por columnas
   const buttons = [
-    'C', '/', // Primera fila
-    '7', '8', '9', '+', // Segunda fila
-    '4', '5', '6', '*', // Tercera fila
-    '1', '2', '3', '-',// Cuarta fila
-    '0', '.', '='        // Quinta fila
+    'C', '7', '8', '9', '+',  // Primera fila
+    '4', '5', '6', '-',       // Segunda fila
+    '1', '2', '3', '*',       // Tercera fila
+    '0', '.', '=', '/',       // Cuarta fila
   ];
+
+  // Define los botones que son operadores
+  const operatorButtons = ['+', '-', '*', '/', '='];
 
   return (
     <div className="keypad">
       {buttons.map((btn, index) => (
-        // Renderiza cada botón y asigna el evento de clic
-        <button key={index} onClick={() => handleClick(btn)}>
+        <button 
+          key={index} 
+          onClick={() => handleClick(btn)}
+          // Aplica una clase diferente si es un operador o el botón "C"
+          className={
+            btn === 'C' ? 'clear' : 
+            operatorButtons.includes(btn) ? 'operator' : ''
+          }
+        >
           {btn}
         </button>
       ))}
